@@ -1,4 +1,8 @@
 def dfs(graph, start, visited=None, to=0, path_len=0):
+    # some comments 
+    if not start:
+	raise ValueError
+
     if start == to:
         return visited, path_len, True
 
@@ -14,3 +18,5 @@ def dfs(graph, start, visited=None, to=0, path_len=0):
             return visited.union({next}), path_len + 1, True
 
     return visited, path_len, False
+
+    # end of code
